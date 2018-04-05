@@ -1,0 +1,40 @@
+name: exp
+channels:
+  - soumith
+dependencies:
+  # CUDA-enabled caffe
+  # See https://github.com/conda-forge/caffe-feedstock/issues/27
+  - python=2.7
+  - cudatoolkit=8.0
+  - cudnn=7.0.5
+  - caffe-gpu
+  # CUDA-enabled tensorflow
+  - tensorflow-gpu
+  # pytorch from soumith
+  - pytorch
+  - torchvision
+  - magma-cuda80
+  - typing
+  - mkl-include
+  # numpy/scipy
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - graphviz
+  - numba
+  - jupyter
+  - pyyaml
+  - mkl
+  - setuptools
+  - cmake
+  - cffi
+  - tqdm
+  # cleverhans
+  - pip
+  - pip:
+    - git+https://github.com/tensorflow/cleverhans.git#egg=cleverhans
+  # for amt directory
+  - jinja2
+  - markupsafe
+  - boto
